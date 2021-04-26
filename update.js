@@ -55,3 +55,26 @@ function getCookie(name) {
 	  })
 	.catch(error => console.log('error', error));
 //}
+
+
+function update_user(){
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", token);
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+    "username": "devansh2002"
+    });
+
+    var requestOptions = {
+    method: 'PUT',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+    };
+
+    fetch("https://meetify-in.herokuapp.com/users/606709bff1f1c41ca44da6bb", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+}
