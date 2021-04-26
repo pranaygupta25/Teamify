@@ -64,7 +64,7 @@ function login_user() {
 	.then(json => {
 		setCookie("token",json.token,5);
 		setCookie("id",json.id,5);
-		window.location.replace("home.html");
+		window.location.replace("index.html");
 	  }).catch((err) => {
 		console.log(err);
 	  })
