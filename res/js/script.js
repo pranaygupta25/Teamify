@@ -85,4 +85,6 @@ function logout_user(){
 	deleteCookie("id");
 	deleteCookie("token");
 	deleteCookie("name");
+	location.replace("login.html");
+	window.alert("Logout Successful!");
 }

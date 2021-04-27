@@ -65,9 +65,17 @@ function login_user() {
 		setCookie("token",json.token,14); 
 		setCookie("id",json.id,14);
 		setCookie("name",json.name,14);
+		console.log("Login Complete");
 		location.replace("index.html");
 	  }).catch((err) => {
 		console.log(err);
 	  })
 	.catch(error => console.log('error', error));
+}
+
+function setCookie(name,value,exp_days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exp_days*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
