@@ -41,7 +41,7 @@ function getCookie(name) {
 	redirect: 'follow'
 	};
 
-	fetch("https://meetify-in.herokuapp.com/users/current", requestOptions)
+	fetch("https://teamify-in.herokuapp.com/users/current", requestOptions)
 	.then(response => response.json())
 	.then(json => {
         const name = json.name;
@@ -73,7 +73,7 @@ function update_user(){
     redirect: 'follow'
     };
 
-    fetch("https://meetify-in.herokuapp.com/users/606709bff1f1c41ca44da6bb", requestOptions)
+    fetch("https://teamify-in.herokuapp.com/users/606709bff1f1c41ca44da6bb", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));

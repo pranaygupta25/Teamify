@@ -34,7 +34,7 @@ function register_user() {
 	redirect: 'follow'
 	};
 
-	fetch("https://meetify-in.herokuapp.com/users/register", requestOptions)
+	fetch("https://teamify-in.herokuapp.com/users/register", requestOptions)
 	.then(response => response.text())
 	.then(result => console.log(result))
 	.catch(error => console.log('error', error));
@@ -59,7 +59,7 @@ function login_user() {
 	redirect: 'follow'
 	};
 
-	fetch("https://meetify-in.herokuapp.com/users/authenticate", requestOptions)
+	fetch("https://teamify-in.herokuapp.com/users/authenticate", requestOptions)
 	.then(response => response.json())
 	.then(json => {
 		setCookie("token",json.token,5);
