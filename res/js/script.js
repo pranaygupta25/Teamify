@@ -136,6 +136,7 @@ function login_user() {
 	body: raw,
 	redirect: 'follow'
 	};
+    console.log("Hello");
 
 	fetch("https://teamify-in.herokuapp.com/users/authenticate", requestOptions)
 	.then(response => response.json())
