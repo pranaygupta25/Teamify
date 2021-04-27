@@ -139,3 +139,10 @@ function update_user(){
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 }
+
+//Logout Function
+function logout_user(){
+	deleteCookie("id");
+	deleteCookie("token");
+	deleteCookie("name");
+}
