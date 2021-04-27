@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+a {
+    color: white;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.navbar  {
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+	width: 100%;
+    background-color: rgba(245, 245, 245, 0.5);    
+}
+.navbarLinks{
+    padding: 1vh 2vw;
+    margin: 1vh 1vw;
+    border-radius: 2vw;
+    background-color: rgba(0,111,122, 0.5);
+}
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1vh 2vw;
+    margin: 1vh 1vw;
+
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+}
+.links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 600;
+}
+.navbarLinks{
+    padding-left: 40px;
+}
+.navbarLinks:hover{
+    filter: brightness(0.9) opacity(0.5);
+}
+#callToAction{
+    background: linear-gradient(#ffc340, #e2950c);
+    height: 4vh;
+    border-radius: 2vh;
+    color: #333;
+}
+#callToAction:hover{
+    filter: brightness(1.1) opacity(0.9);
+}
+
+
+.svg{
+    width: 100vw;
+    position: relative;
+    bottom: 35vh;
+    z-index: -1;
+}
+#tractor{
+    transform: translateX(-15vw);
+    animation: forward 15s linear infinite;
+
+}
+@keyframes forward {
+    0%{
+        transform: translateX(-15vw);
+    }
+    30%{
+        transform: translateX(0);
+    }
+    35%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(30vw);
+    }
+}
+#fan{
+    animation: rotate 10s linear infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0);
+    }
+}
+#secbg{
+    animation: hueshift 3s reverse infinite;
+}
+@keyframes hueshift {
+    0%{
+        filter: hue-rotate(0) opacity(100%);
+    }
+    50%{
+        filter: hue-rotate(5deg) opacity(50%);
+    }
+    100%{
+        filter: hue-rotate(0) opacity(100%);
+    }
+}
+#cloudleft1{
+    transform: translateX(-10vw);
+    animation: float1 40s alternate infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+@keyframes float1 {
+    from{
+        transform: translateX(-10vw);
+    }
+    to{
+        transform: translateX(0vw);
+    }
+}
+#cloudright1{
+    transform: translateX(15vw);
+    animation: float2 40s alternate-reverse infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+@keyframes float2 {
+    from{
+        transform: translateX(15vw) translateY(4vh);
+    }
+    to{
+        transform: translateX(0vw) translateY(0);
+    }
+}
+#bird1{
+    animation: flyright 10s linear forwards;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+@keyframes flyright {
+    from{
+        transform: scale(2) translate(0, 0);
+    }
+    to{
+        transform: scale(0) translate(10vw, 3vh)
+    }
+}
+#cloud3{
+    animation: float3 25s alternate infinite;
+}
+@keyframes float3 {
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform: translate(20px, 5px);
+    }
+}
+
+
+.text{
+    width: 100vw;
+    height: 15vh;
+    z-index: 5;
+    position: relative;
+    bottom: 50vh;
+    transform: translateY(-50%);
+    background: linear-gradient(rgba(139, 213, 236, 0.8), rgba(41, 42, 117, 0.5));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description{
+    padding: 2vh;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.mainhead{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 34vh;
+    left: 17vw;
+}
+.mainhead h3{
+    color: #b5ffe3;
+    text-shadow: 0 0 5vh #333;
+}
+.mainhead h1{
+    text-transform: uppercase;
+    font-size: 4em;
+    color: #ffc340;
+    text-shadow: 0 0 5vh #333;
+}
