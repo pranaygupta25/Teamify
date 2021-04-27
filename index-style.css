@@ -9,6 +9,7 @@ body{
     width: 100vw;
     height: 100vh;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 a {
     color: white;
@@ -120,7 +121,6 @@ a {
     }
 }
 #cloudleft1{
-    /* display: none; */
     transform: translateX(-10vw);
     animation: float1 40s alternate infinite;
     transform-box: fill-box;
@@ -135,7 +135,6 @@ a {
     }
 }
 #cloudright1{
-    /* display: none; */
     transform: translateX(15vw);
     animation: float2 40s alternate-reverse infinite;
     transform-box: fill-box;
@@ -192,4 +191,24 @@ a {
     color: white;
     text-align: center;
     font-size: 0.8em;
+}
+
+.mainhead{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 34vh;
+    left: 17vw;
+}
+.mainhead h3{
+    color: #b5ffe3;
+    text-shadow: 0 0 5vh #333;
+}
+.mainhead h1{
+    text-transform: uppercase;
+    font-size: 4em;
+    color: #ffc340;
+    text-shadow: 0 0 5vh #333;
 }
