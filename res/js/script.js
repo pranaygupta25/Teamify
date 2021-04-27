@@ -136,18 +136,38 @@ function login_user() {
 	body: raw,
 	redirect: 'follow'
 	};
-    console.log("Hello");
 
-	fetch("https://teamify-in.herokuapp.com/users/authenticate", requestOptions)
-	.then(response => response.json())
-	.then(json => {
-		setCookie("token",json.token,14); 
+	// fetch("https://teamify-in.herokuapp.com/users/authenticate", requestOptions)
+	// .then(response => response.json())
+	// .then(json => {
+	// 	setCookie("token",json.token,14); 
+	// 	setCookie("id",json.id,14);
+	// 	setCookie("name",json.name,14);
+	// 	console.log("Login Complete");
+	// 	location.replace("index.html");
+	//   }).catch((err) => {
+	// 	console.log(err);
+	//   })
+	// .catch(error => console.log('error', error));
+
+    fetch("https://teamify-in.herokuapp.com/users/authenticate", requestOptions).then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+            alert("Wrong username or password.");
+            throw new Error('Login Failed.');
+        }
+      })
+      .then((json) => {
+        setCookie("token",json.token,14); 
 		setCookie("id",json.id,14);
 		setCookie("name",json.name,14);
 		console.log("Login Complete");
 		location.replace("index.html");
-	  }).catch((err) => {
-		console.log(err);
-	  })
-	.catch(error => console.log('error', error));
+      })
+      .catch((error) => {
+        console.log(error)
+      });
+
+
 }
