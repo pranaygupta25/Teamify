@@ -1,2 +1,1 @@
-# Meetify
- 
+#Teamify
